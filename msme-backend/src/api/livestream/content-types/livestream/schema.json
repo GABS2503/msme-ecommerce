@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livestreams",
+  "info": {
+    "singularName": "livestream",
+    "pluralName": "livestreams",
+    "displayName": "Livestream"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "stream_url": {
+      "type": "string"
+    },
+    "is_live": {
+      "type": "boolean"
+    },
+    "shop": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::shop.shop",
+      "inversedBy": "livestream"
+    }
+  }
+}
